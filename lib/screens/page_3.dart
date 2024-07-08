@@ -1,25 +1,21 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import '../app_router.dart';
-
 @RoutePage()
-class Page2 extends StatelessWidget {
-  const Page2({super.key});
+class Page3 extends StatelessWidget {
+  const Page3({super.key, @PathParam.inherit('id') required String id});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Page 2')),
+      appBar: AppBar(
+        title: const Text('Page 3'),
+      ),
       body: Container(
-        color: Colors.yellow,
+        color: Colors.red,
         child: Center(
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ElevatedButton(onPressed: () => AutoRouter.of(context).push(Route3()), child: const Text('Go to Page 3')),
-              ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(onPressed: () => AutoRouter.of(context).back(), child: const Text('Go Back')),

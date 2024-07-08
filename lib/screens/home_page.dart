@@ -22,7 +22,11 @@ class HomePage extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: ElevatedButton(onPressed: () => AutoRouter.of(context).pushNamed('/Route2'), child: const Text('Go Page 2')),
+                child: ElevatedButton(onPressed: () => AutoRouter.of(context).pushNamed('/route2'), child: const Text('Go Page 2')),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(onPressed: () => AutoRouter.of(context).pushNamed('/route3'), child: const Text('Go Page 3')),
               ),
             ],
           ),

@@ -33,6 +33,17 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const Page2(),
       );
     },
+    Route3.name: (routeData) {
+      final pathParams = routeData.inheritedPathParams;
+      final args = routeData.argsAs<Route3Args>(orElse: () => Route3Args());
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: Page3(
+          key: args.key,
+          id: pathParams.getString('id'),
+        ),
+      );
+    },
   };
 }
 
@@ -76,4 +87,32 @@ class Route2 extends PageRouteInfo<void> {
   static const String name = 'Route2';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Page3]
+class Route3 extends PageRouteInfo<Route3Args> {
+  Route3({
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          Route3.name,
+          args: Route3Args(key: key),
+          initialChildren: children,
+        );
+
+  static const String name = 'Route3';
+
+  static const PageInfo<Route3Args> page = PageInfo<Route3Args>(name);
+}
+
+class Route3Args {
+  const Route3Args({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'Route3Args{key: $key}';
+  }
 }
