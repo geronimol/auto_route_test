@@ -1,8 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import '../app_router.dart';
-
 @RoutePage()
 class Page1 extends StatelessWidget {
   const Page1({super.key});
@@ -20,7 +18,7 @@ class Page1 extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: ElevatedButton(onPressed: () => AutoRouter.of(context).push(const Route2()), child: const Text('Go Page 2')),
+                child: ElevatedButton(onPressed: () => AutoRouter.of(context).pushNamed('/id1/route2'), child: const Text('Go Page 2')),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
