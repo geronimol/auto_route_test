@@ -33,6 +33,10 @@ class HomePage extends StatelessWidget {
                 padding: EdgeInsets.all(8.0),
                 child: CounterWidget(),
               ),
+              const Hero(
+                tag: 'test',
+                child: FlutterLogo(),
+              ),
             ],
           ),
         ),

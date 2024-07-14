@@ -24,6 +24,10 @@ class Page2 extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(onPressed: () => AutoRouter.of(context).back(), child: const Text('Go Back')),
               ),
+              const Hero(
+                tag: 'test',
+                child: FlutterLogo(),
+              ),
             ],
           ),
         ),

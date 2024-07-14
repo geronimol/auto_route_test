@@ -7,6 +7,11 @@ class Page2Wrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const AutoRouter();
+    return HeroControllerScope(
+      controller: HeroController(),
+      child: AutoRouter(
+        navigatorObservers: ()=> [HeroController()],
+      ),
+    );
   }
 }
