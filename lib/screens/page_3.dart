@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 
 @RoutePage()
 class Page3 extends StatelessWidget {
-  const Page3({super.key, @PathParam.inherit('id') required String id});
+  const Page3({super.key, @PathParam.inherit('id') required this.id});
+
+  final String id;
 
   @override
   Widget build(BuildContext context) {

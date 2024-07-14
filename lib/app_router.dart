@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'screens/home_page.dart';
 import 'screens/page_1.dart';
 import 'screens/page_2.dart';
+import 'screens/page_2_wrapper.dart';
 import 'screens/page_3.dart';
 
 part 'app_router.gr.dart';
@@ -16,8 +17,11 @@ class AppRouter extends _$AppRouter {
         AutoRoute(path: '/route1', page: Route1.page),
         AutoRoute(
           path: '/:id',
-          page: Route2.page,
-          children: [AutoRoute(path: 'route3', page: Route3.page)],
+          page: Route2Wrapper.page,
+          children: [
+            AutoRoute(path: 'route2', page: Route2.page),
+            AutoRoute(path: 'route3', page: Route3.page),
+          ],
         ),
         // AutoRoute(page: Route3.page),
       ];
