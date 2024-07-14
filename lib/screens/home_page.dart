@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 
 import '../app_router.dart';
+import '../widgets/counter_widget.dart';
 
 @RoutePage()
 class HomePage extends StatelessWidget {
@@ -27,6 +28,10 @@ class HomePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(onPressed: () => AutoRouter.of(context).pushNamed('/id1/route3'), child: const Text('Go Page 3')),
+              ),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: CounterWidget(),
               ),
             ],
           ),
